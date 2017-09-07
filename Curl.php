@@ -282,7 +282,7 @@ class Curl
             // if its not then set header
             else
             {
-                $this->_headers[] = "{$key}: {$value}";
+                $this->_headers[$key] = "{$key}: {$value}";
             }
         }
 
@@ -328,7 +328,7 @@ class Curl
         $headerValue = base64_encode($headerValue);
 
         // add header
-        $this->_headers[] = "{$headerName}: Basic {$headerValue}";
+        $this->_headers[$headerName] = "{$headerName}: Basic {$headerValue}";
     }
 
     /**
